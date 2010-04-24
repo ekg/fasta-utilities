@@ -1,5 +1,7 @@
 #!/usr/bin/python
 #
+# This software is freely provided for any use.
+#
 # erik garrison <erik.garrison@bc.edu>
 
 import fasta
