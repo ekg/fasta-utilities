@@ -1,4 +1,6 @@
 #!/usr/bin/python
+#
+# erik garrison <erik.garrison@bc.edu>
 
 import fasta
 from fasta import fasta_itr
