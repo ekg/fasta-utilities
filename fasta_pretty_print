@@ -10,11 +10,9 @@ header = sys.argv[1]
 
 print ">" + header
 
-fasta = sys.stdin.read().strip()
+fasta = sys.stdin.read(80)
 
-i = 0
-while i < len(fasta):
-    sys.stdout.write(fasta[i:i+80] + '\n')
-    i += 80
+while fasta != "":
+    sys.stdout.write(fasta + '\n')
+    fasta = sys.stdin.read(80).strip()
 
-sys.stdout.write(fasta[i:])
