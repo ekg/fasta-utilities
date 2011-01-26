@@ -1,0 +1,20 @@
+#!/usr/bin/python
+
+import sys
+
+if len(sys.argv) < 2:
+    print "usage: <sequence_stream> |", sys.argv[0], " <header>"
+    exit()
+
+header = sys.argv[1]
+
+print ">" + header
+
+fasta = sys.stdin.read().strip()
+
+i = 0
+while i < len(fasta):
+    sys.stdout.write(fasta[i:i+80] + '\n')
+    i += 80
+
+sys.stdout.write(fasta[i:])
